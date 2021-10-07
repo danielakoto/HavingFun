@@ -10,7 +10,7 @@
     "rules": "storage.rules"
   },
   "hosting": {
-    "public": "trunk",
+    "public": "trunk/public",
     "ignore": [
       "firebase.json",
       "**/.*",

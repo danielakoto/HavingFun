@@ -1,4 +1,46 @@
 * {
     display: flexbox;
     margin: 0;
+    background-color: #DAF7A6;
+}
+
+body {
+    position: relative;
+}
+
+.title {
+    background-color: #FF5733;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-bottom: solid black;
+}
+
+.havingfun_10, .havingfun_100, .havingfun_1000, .havingfun_tf {
+    color: white;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.havingfun_10 {
+    background-color: #581845;
+}
+
+.havingfun_100 {
+    background-color: #900C3F;
+}
+
+.havingfun_1000 {
+    background-color: #C70039;
+}
+
+.havingfun_tf {
+    background-color: #FF5733;
+}
+
+.havingfun_10:hover, .havingfun_100:hover, .havingfun_1000:hover, .havingfun_tf:hover {
+    background-color: #FFC300;
+}
+
+.havingfun_10:active, .havingfun_100:active, .havingfun_1000:active, .havingfun_tf:active {
+    size:20px;
 }
