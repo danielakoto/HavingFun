@@ -37,7 +37,7 @@ body {
     background-color: #FF5733;
 }
 
-.havingfun_10:hover, .havingfun_100:hover, .havingfun_1000:hover, .havingfun_tf:hover {
+.havingfun_10:hover, .havingfun_100:hover, .havingfun_1000:hover, .havingfun_tf:hover, .havingfun_sc:hover {
     background-color: #FFC300;
 }
 
@@ -54,4 +54,9 @@ body {
 
     color: white;
     background-color: black;
+}
+
+@media screen and (max-width:520px) {
+    /* CSS for screens that are 320 pixels or less will be put in this section */
+    
 }

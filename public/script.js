@@ -28,6 +28,8 @@ let list = [];
 const sc = document.getElementById("somethingcool");
 const numbers = document.getElementById("numbers");
 const some = document.getElementById("some");
+
+//GAME START
 async function somethingcool() { 
     some.style.display = "none";
     for(let i = 0; i < 3; i++){
@@ -45,8 +47,10 @@ async function somethingcool() {
     // });
 }
 
-const cAnswer = document.getElementById("correctOrNot")
-const cc = document.getElementById("check")
+const cAnswer = document.getElementById("correctOrNot");
+const cc = document.getElementById("check");
+
+//CHECKING ANSWER
 async function check() {
     console.log(cc.value);
     //let str = 
@@ -62,21 +66,27 @@ async function check() {
         cAnswer.innerHTML = "Correct!";
         await sleep(100);
         level++;
-        lev.innerHTML = "Level: " + level;
-        sc.innerHTML = "Click Start to Continue";
+        getLevel();
+        sc.innerHTML = "Click to Continue";
+        some.innerHTML = "Continue";
         some.style.display = "inline-block";
+        cc.value = "";
     }else {
+        level = 1;
+        getLevel();
         cAnswer.innerHTML = " ";
         await sleep(100);
         cAnswer.innerHTML = "Not! Try Again.";
         await sleep(100);
-        sc.innerHTML = "Click Start to try again";
+        sc.innerHTML = "Try again";
+        some.innerHTML = "Start";
         some.style.display = "inline-block";
+        cc.value = "";
     }
 }
 
-function addLevel() {
-
+function getLevel() {
+    lev.innerHTML = "Level: " + level;
 }
 
 function arraysEqual(a, b) {
