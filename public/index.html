@@ -10,9 +10,12 @@
 </head>
 <body>
     <center><div class="head-container">
-        <h1 class="title">Having Fun!</h1>
+        <h1 class="title" style="font-size: 45px;">Having Fun!</h1>
     </div></center>
-    <center><div>
+    <div>
+        <p id="level"></p>
+    </div>
+    <!-- <center><div>
         <h1 id="havingfun">Random Number</h1>
         <br>
         <button onclick="doS(11)" class="havingfun_10" style="font-size: 25px;">0-10</button>
@@ -24,12 +27,24 @@
         <h1 id="headsortails">Heads or Tails</h1>
         <br>
         <button onclick="headsortails()" class="havingfun_tf" style="font-size: 25px;">Heads or Tails</button>
-    </div></center>
+    </div></center> -->
     <center><div>
-        <h1 id="somethingcool">Something Cool</h1>
+        <h1 id="somethingcool" style="font-size: 30px; margin-top: 40px;">Click Start To Begin</h1>
         <br>
-        <button onclick="somethingcool()" class="havingfun_sc" style="font-size: 25px;">Something Cool</button>
+        <button onclick="somethingcool()" class="havingfun_sc" id="some" style="font-size: 25px;">Start</button>
+        <br><br>
+        <!-- <form> -->
+            <label for="check" id="numbers">Numbers(ex. 1 3 5) : </label>
+            <br>
+            <input id="check" type="text" name="text">
+            <input type="submit" onsubmit="return false" onclick="check()" class="havingfun_btn">
+        <!-- </form>     -->
     </div></center>
+
+    <center>
+        <div>
+            <h1 id="correctOrNot">Correct or Not</h1>
+        </div></center>
 </body>
 <script src="script.js"></script>
 </html>
