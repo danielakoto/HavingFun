@@ -2,6 +2,7 @@
     display: flexbox;
     margin: 0;
     background-color: #f3f3f3;
+    font-family: 'Raleway', sans-serif;
 }
 
 body {
@@ -9,9 +10,9 @@ body {
 }
 
 .title {
-    background-color: #FF5733;
-    padding: 20px;
+    background-color: #FFC300;
     margin-bottom: 10px;
+    padding: 20px;
     border-bottom: solid black;
 }
 
@@ -46,15 +47,30 @@ body {
 }
 
 .havingfun_sc {
-    background-color: #FF5733;
+    background-color: #8fff33;
     color: black;
 }
 
 .havingfun_btn {
-
     color: white;
     background-color: black;
+    border-radius: 5px;
 }
+
+.container2 {
+    margin-top: 10%;
+    background-color: rgba(187, 187, 187, 0.418);
+    display: inline-block;
+    position: relative;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
 
 @media screen and (max-width:520px) {
     /* CSS for screens that are 320 pixels or less will be put in this section */

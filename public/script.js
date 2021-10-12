@@ -67,8 +67,8 @@ async function check() {
         await sleep(100);
         level++;
         getLevel();
-        sc.innerHTML = "Click to Continue";
-        some.innerHTML = "Continue";
+        sc.innerHTML = "Continue!";
+        some.innerHTML = "Next";
         some.style.display = "inline-block";
         cc.value = "";
     }else {
@@ -76,8 +76,7 @@ async function check() {
         getLevel();
         cAnswer.innerHTML = " ";
         await sleep(100);
-        cAnswer.innerHTML = "Not! Try Again.";
-        await sleep(100);
+        cAnswer.innerHTML = "Not!";
         sc.innerHTML = "Try again";
         some.innerHTML = "Start";
         some.style.display = "inline-block";
