@@ -34,7 +34,7 @@ async function somethingcool() {
     some.style.display = "none";
     for(let i = 0; i < 3; i++){
         await sleep(1000-(50*level));
-        let num = Math.floor(Math.random() * 11)
+        let num = Math.floor(Math.random() * 101)
         sc.innerHTML = "-";
         await sleep(50);
         sc.innerHTML = num;
