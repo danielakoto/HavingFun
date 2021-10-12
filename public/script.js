@@ -54,7 +54,7 @@ const cc = document.getElementById("check");
 async function check() {
     console.log(cc.value);
     //let str = 
-    let str = cc.value.split(" ");
+    let str = cc.value.split(",");
     let arr = [parseInt(str[0]),parseInt(str[1]),parseInt(str[2])];
     arr.forEach(e=> {
         console.log(e)
