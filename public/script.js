@@ -2,10 +2,13 @@
 //await sleep function
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
-  }
+}
+
 let level = 1;
 const lev = document.getElementById("level");
 lev.innerHTML = "Level: " + level;
+
+let amount = [11, 91, 891, 8991];
 
 const hf = document.getElementById("havingfun");
 function doS(x) {
@@ -32,14 +35,44 @@ const some = document.getElementById("some");
 //GAME START
 async function somethingcool() { 
     some.style.display = "none";
-    for(let i = 0; i < 3; i++){
-        await sleep(1000-(50*level));
-        let num = Math.floor(Math.random() * 101)
-        sc.innerHTML = "-";
-        await sleep(50);
-        sc.innerHTML = num;
-        list[i] = num;
+    if(level >= 1 && level <= 5) {
+        for(let i = 0; i < 3; i++){
+                await sleep(1000-(50*level));
+                let num = Math.floor(Math.random() * amount[0]);
+                sc.innerHTML = "-";
+                await sleep(50);
+                sc.innerHTML = num;
+                list[i] = num;
+        }
+    } else if(level >= 6 && level <= 10){
+        for(let i = 0; i < 3; i++){
+            await sleep(1000-(10*level));
+            let num = Math.floor(Math.random() * amount[1])+10;
+            sc.innerHTML = "-";
+            await sleep(50);
+            sc.innerHTML = num;
+            list[i] = num;
+        }
+    } else if (level >= 11 && level <= 15) {
+        for(let i = 0; i < 3; i++){
+            await sleep(1000);
+            let num = Math.floor(Math.random() * amount[2])+100;
+            sc.innerHTML = "-";
+            await sleep(50);
+            sc.innerHTML = num;
+            list[i] = num;
+        }
+    } else {
+        for(let i = 0; i < 3; i++){
+            await sleep(1000);
+            let num = Math.floor(Math.random() * amount[3])+1000;
+            sc.innerHTML = "-";
+            await sleep(50);
+            sc.innerHTML = num;
+            list[i] = num;
+        }
     }
+
     await sleep(500);
     sc.innerHTML = "done";
     // list.forEach(e => {
