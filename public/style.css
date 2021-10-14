@@ -16,45 +16,22 @@ body {
     border-bottom: solid black;
 }
 
-.havingfun_10, .havingfun_100, .havingfun_1000, .havingfun_tf, .havingfun_sc {
-    color: white;
+.havingfun_sc {
+    background-color: #8fff33;
     border-radius: 5px;
     margin: 0px;
 }
 
-.havingfun_10 {
-    background-color: #581845;
-}
-
-.havingfun_100 {
-    background-color: #900C3F;
-}
-
-.havingfun_1000 {
-    background-color: #C70039;
-}
-
-.havingfun_tf {
-    background-color: #FF5733;
-}
-
-.havingfun_10:hover, .havingfun_100:hover, .havingfun_1000:hover, .havingfun_tf:hover, .havingfun_sc:hover {
+.havingfun_sc:hover {
     background-color: #FFC300;
-}
-
-.havingfun_10:active, .havingfun_100:active, .havingfun_1000:active, .havingfun_tf:active {
-    size:20px;
-}
-
-.havingfun_sc {
-    background-color: #8fff33;
-    color: black;
+    cursor: pointer;
 }
 
 .havingfun_btn {
     color: white;
     background-color: black;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .container2 {
@@ -65,12 +42,6 @@ body {
     padding: 40px;
     border-radius: 10px;
 }
-
-
-
-
-
-
 
 @media screen and (max-width:520px) {
     /* CSS for screens that are 320 pixels or less will be put in this section */

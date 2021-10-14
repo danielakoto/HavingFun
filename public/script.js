@@ -1,32 +1,20 @@
 
-//await sleep function
+//  await sleep function
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+//init level for interface and game functionality 
 let level = 1;
 const lev = document.getElementById("level");
 lev.innerHTML = "Level: " + level;
 
+//init array of the amount or numbers that can be shown on screen (1,2,3,4)
 let amount = [11, 91, 891, 8991];
 
-const hf = document.getElementById("havingfun");
-function doS(x) {
-    let rand = Math.floor(Math.random() * x);
-    hf.innerHTML = rand;
-    console.log(rand);
-}
-
-const ht = document.getElementById("headsortails");
-function headsortails() {
-    let rand = Math.floor(Math.random() * 10);
-    if(rand % 2 == 1){
-        ht.innerHTML = "heads";
-    }else
-        ht.innerHTML = "tails";
-    console.log(rand + " " + ht.innerHTML);
-}
+// declare array list which will take in the random numbers that are shown on the screen
 let list = [];
+
 
 const sc = document.getElementById("somethingcool");
 const numbers = document.getElementById("numbers");
@@ -75,9 +63,6 @@ async function somethingcool() {
 
     await sleep(500);
     sc.innerHTML = "done";
-    // list.forEach(e => {
-    //     console.log(e);
-    // });
 }
 
 const cAnswer = document.getElementById("correctOrNot");
@@ -109,7 +94,7 @@ async function check() {
         getLevel();
         cAnswer.innerHTML = " ";
         await sleep(100);
-        cAnswer.innerHTML = "Not!";
+        cAnswer.innerHTML = "Not! <br> Numbers: " +  JSON.stringify(list);
         sc.innerHTML = "Try again";
         some.innerHTML = "Start";
         some.style.display = "inline-block";
@@ -117,10 +102,12 @@ async function check() {
     }
 }
 
+//Level getter
 function getLevel() {
     lev.innerHTML = "Level: " + level;
 }
 
+//check if 2 arrays are equal
 function arraysEqual(a, b) {
     if (a === b) return true;
     if (a == null || b == null) return false;
@@ -130,4 +117,4 @@ function arraysEqual(a, b) {
       if (a[i] !== b[i]) return false;
     }
     return true;
-  }
+}
