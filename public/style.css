@@ -42,8 +42,3 @@ body {
     padding: 40px;
     border-radius: 10px;
 }
-
-@media screen and (max-width:520px) {
-    /* CSS for screens that are 320 pixels or less will be put in this section */
-    
-}

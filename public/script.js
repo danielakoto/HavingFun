@@ -98,7 +98,7 @@ async function check() {
         sc.innerHTML = "Try again";
         some.innerHTML = "Start";
         some.style.display = "inline-block";
-        cc.value = "";
+        cc.value = " ";
     }
 }
 
