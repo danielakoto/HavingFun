@@ -17,14 +17,14 @@
     <body>
         <center>
             <div class="head-container">
-                <h1 class="title" style="font-size: 45px;">Having Fun!</h1>
+                <h4 class="title" style="font-size: 2rem;">Having Fun!</h4>
             </div>
         </center>
         
         <center>
             <div class="body">
                 <div class="container1">
-                    <h1 id="somethingcool" style="font-size: 45px; margin-top: 6%;">Click Start To Begin</h1>
+                    <h4 id="header-message" style="font-size: 2rem; margin-top: 6%;">Click Start To Begin</h4>
                 </div>
                 <div>
                     <p id="level" style="font-size: 15px;"></p>
@@ -45,13 +45,13 @@
                         
                     </div>
                     <div class="action">
-                        <button onclick="somethingcool()" class="havingfun_sc" id="some">Start</button>
-                        <button onclick="check()" type="submit" class="havingfun_btn">Submit</button>
+                        <button onclick="handleStartFunc()" class="start-button" id="start-button-id">Start</button>
+                        <button onclick="check()" type="submit" class="submit-button" id="submit-button-id" style="display:none;">Submit</button>
                     </div>
                 </div>
 
                 <div class="container3">
-                    <h1 id="correctOrNot" style="font-size: 40px; margin-top: 10%;">Correct or Not!</h1>
+                    <h1 id="correctOrNot" style="font-size: 40px; margin-top: 10%;">Correct or Wrong!</h1>
                 </div>
         
             </div>

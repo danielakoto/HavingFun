@@ -13,43 +13,47 @@ body {
     background-color: #FFC300;
     margin-bottom: 10px;
     padding: 20px;
-    border-bottom: solid black;
 }
 
-.havingfun_sc {
+.head-container {
+    width: 100%;
+}
+
+.start-button {
     background-color: #FFC300;
     border-radius: 5px;
     margin: 0px;
-    grid-column: span 1;
-    font-size: 40px;
+    font-size: 1.5rem;
+    flex-grow: 1;
+    color: black;
 }
 
-.havingfun_sc:hover {
+.start-button:hover {
     background-color: #ffd342;
     cursor: pointer;
 }
 
-.havingfun_btn {
-    width: 50%;
+.submit-button {
     border-radius: 5px;
     cursor: pointer;
-    font-size: 40px;
+    font-size: 1.5rem;
     flex-grow: 1;
     background-color: #8fff33;
+    color: black;
 }
 
-.havingfun_btn:hover {
+.submit-button:hover {
     background-color: #aefd6d;
 }
 
 .game-section {
-    width: 50%;
+    /* width: 100%; */
     max-width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    padding: 40px;
+    padding: 1.5rem;
     border-radius: 10px;
     gap: 8px;
 }
@@ -59,6 +63,7 @@ body {
     font-size: 1.5em;
     border-radius: 5px;
     background-color: white;
+    color: black;
 }
 
 .numpad {
@@ -73,6 +78,7 @@ body {
     cursor: pointer;
     border-radius: 5px;
     background-color: white;
+    color: black;
 }
 .action {
     width: 100%;
@@ -82,5 +88,6 @@ body {
 
 .action button {
     padding: 20px;
+    color: black;
 }
 
