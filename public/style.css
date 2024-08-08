@@ -1,7 +1,7 @@
 * {
     display: flexbox;
     margin: 0;
-    background-color: #f3f3f3;
+    background-color: #e3e3e3;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -17,28 +17,70 @@ body {
 }
 
 .havingfun_sc {
-    background-color: #8fff33;
+    background-color: #FFC300;
     border-radius: 5px;
     margin: 0px;
+    grid-column: span 1;
+    font-size: 40px;
 }
 
 .havingfun_sc:hover {
-    background-color: #FFC300;
+    background-color: #ffd342;
     cursor: pointer;
 }
 
 .havingfun_btn {
-    color: white;
-    background-color: black;
+    width: 50%;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 40px;
+    flex-grow: 1;
+    background-color: #8fff33;
 }
 
-.container2 {
-    margin-top: 10%;
-    background-color: rgba(187, 187, 187, 0.418);
-    display: inline-block;
+.havingfun_btn:hover {
+    background-color: #aefd6d;
+}
+
+.game-section {
+    width: 50%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
     padding: 40px;
     border-radius: 10px;
+    gap: 8px;
 }
+
+#check {
+    padding: 20px;
+    font-size: 1.5em;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.numpad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+.numpad button {
+    padding: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: white;
+}
+.action {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.action button {
+    padding: 20px;
+}
+

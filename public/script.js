@@ -13,15 +13,18 @@ lev.innerHTML = "Level: " + level;
 let amount = [11, 91, 891, 8991];
 
 // declare array list which will take in the random numbers that are shown on the screen
-let list = [];
+let list = "";
 
 
 const sc = document.getElementById("somethingcool");
 const numbers = document.getElementById("numbers");
 const some = document.getElementById("some");
-
+const cAnswer = document.getElementById("correctOrNot");
+const cc = document.getElementById("check");
 //GAME START
 async function somethingcool() { 
+    cc.value = ""
+    list = ""
     some.style.display = "none";
     if(level >= 1 && level <= 5) {
         for(let i = 0; i < 3; i++){
@@ -30,7 +33,7 @@ async function somethingcool() {
                 sc.innerHTML = "-";
                 await sleep(50);
                 sc.innerHTML = num;
-                list[i] = num;
+                list += num;
         }
     } else if(level >= 6 && level <= 10){
         for(let i = 0; i < 3; i++){
@@ -39,7 +42,7 @@ async function somethingcool() {
             sc.innerHTML = "-";
             await sleep(50);
             sc.innerHTML = num;
-            list[i] = num;
+            list += num;
         }
     } else if (level >= 11 && level <= 15) {
         for(let i = 0; i < 3; i++){
@@ -48,7 +51,7 @@ async function somethingcool() {
             sc.innerHTML = "-";
             await sleep(50);
             sc.innerHTML = num;
-            list[i] = num;
+            list += num;
         }
     } else {
         for(let i = 0; i < 3; i++){
@@ -57,7 +60,7 @@ async function somethingcool() {
             sc.innerHTML = "-";
             await sleep(50);
             sc.innerHTML = num;
-            list[i] = num;
+            list += num;
         }
     }
 
@@ -65,21 +68,19 @@ async function somethingcool() {
     sc.innerHTML = "done";
 }
 
-const cAnswer = document.getElementById("correctOrNot");
-const cc = document.getElementById("check");
 
 //CHECKING ANSWER
 async function check() {
+    
     console.log(cc.value);
-    //let str = 
-    let str = cc.value.split(",");
-    let arr = [parseInt(str[0]),parseInt(str[1]),parseInt(str[2])];
-    arr.forEach(e=> {
-        console.log(e)
-    })
-    console.log(arraysEqual(list, arr));
-    if(arraysEqual(list, arr) == true) {
-        cAnswer.innerHTML = " ";
+    let str = cc.value 
+
+    console.log(str)
+    console.log(list)
+    
+    console.log(list == str);
+    if(list == str) {
+        cAnswer.innerHTML = "";
         await sleep(100);
         cAnswer.innerHTML = "Correct!";
         await sleep(100);
@@ -89,16 +90,16 @@ async function check() {
         some.innerHTML = "Next";
         some.style.display = "inline-block";
         cc.value = "";
-    }else {
+    } else {
         level = 1;
         getLevel();
-        cAnswer.innerHTML = " ";
+        cAnswer.innerHTML = "";
         await sleep(100);
-        cAnswer.innerHTML = "Not! <br> Numbers: " +  JSON.stringify(list);
+        cAnswer.innerHTML = "Not! <br> Numbers: " + list;
         sc.innerHTML = "Try again";
         some.innerHTML = "Start";
         some.style.display = "inline-block";
-        cc.value = " ";
+        cc.value = "";
     }
 }
 
@@ -113,8 +114,15 @@ function arraysEqual(a, b) {
     if (a == null || b == null) return false;
     if (a.length !== b.length) return false;
   
-    for (var i = 0; i < a.length; ++i) {
+    for (let i = 0; i < a.length; ++i) {
       if (a[i] !== b[i]) return false;
     }
     return true;
+}
+
+function pressNum(num) {
+    cc.value += num;
+}
+function removeNum() {
+    cc.value = cc.value.slice(0, -1); 
 }
